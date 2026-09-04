@@ -1,0 +1,3 @@
+# Copy to terraform.tfvars and adjust. terraform.tfvars is gitignored.
+aws_region = "ap-south-2"
+project    = "infra-mgt"

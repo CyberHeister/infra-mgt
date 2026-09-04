@@ -1,0 +1,43 @@
+# Terraform
+
+# Provider binaries and module cache. Large, machine-specific, re-created by init.
+.terraform/
+.terraform.tfstate.lock.info
+
+# State files. These store values in PLAINTEXT, including generated passwords
+# and access keys. Never commit them.
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Saved plans. Binary plans embed the full state, so they leak the same secrets.
+tfplan
+*.tfplan
+tfplan.txt
+
+# Crash logs may contain state fragments.
+crash.log
+crash.*.log
+
+# Variable files, ignored by default because they are the usual place secrets get
+# typed. Committed examples are exempted below. If this project's tfvars are
+# genuinely non-secret and worth tracking, narrow these two lines rather than
+# force-adding files past them.
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Deliberately NOT ignored: .terraform.lock.hcl
+# The dependency lock pins provider versions and must be committed so CI and
+# every developer resolve identical providers.
+
+# Local CLI overrides
+.terraformrc
+terraform.rc
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# macOS
+.DS_Store
